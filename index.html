@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="scripts/index.js"></script>
+    <title>Пиццерия</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Пиццерия</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#"
+              >Главная страница</a
+            >
+            <a class="nav-link" href="#">О пиццерии</a>
+            <a class="nav-link" href="#">Контакты</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card text-center m-2" style="width: 18rem">
+            <img
+              src="src/pizza/1pepperoni.jpg"
+              class="card-img-top"
+              alt="Пицца Пепперони"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Пицца Пепперони</h5>
+              <div class="btn-group" role="group" aria-label="Размер пиццы">
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio1"
+                  autocomplete="off"
+                  checked
+                />
+                <label class="btn btn-outline-primary" for="btnradio1"
+                  >26см</label
+                >
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio2"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="btnradio2"
+                  >30см</label
+                >
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio3"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="btnradio3"
+                  >40см</label
+                >
+              </div>
+              <div class="quantity">
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  for="q1"
+                  onclick="decr('q1')"
+                >
+                  -
+                </button>
+                <input
+                  type="number"
+                  name="quantity"
+                  size="5"
+                  id="q1"
+                  value="1"
+                  min="1"
+                  max="25"
+                />
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  for="q1"
+                  onclick="inc('q1')"
+                >
+                  +
+                </button>
+              </div>
+              <button type="button" class="btn btn-success">В корзину</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card text-center m-2" style="width: 18rem">
+            <img
+              src="src/pizza/2barbeque.jpg"
+              class="card-img-top"
+              alt="Пицца Барбекю"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Пицца Барбекю</h5>
+              <div class="btn-group" role="group" aria-label="Размер пиццы">
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio4"
+                  autocomplete="off"
+                  checked
+                />
+                <label class="btn btn-outline-primary" for="btnradio4"
+                  >26см</label
+                >
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio5"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="btnradio5"
+                  >30см</label
+                >
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio6"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="btnradio6"
+                  >40см</label
+                >
+              </div>
+              <div class="quantity">
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  for="q2"
+                  onclick="decr('q2')"
+                >
+                  -
+                </button>
+                <input
+                  type="number"
+                  name="quantity"
+                  size="5"
+                  id="q2"
+                  value="1"
+                  min="1"
+                  max="25"
+                />
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  for="q2"
+                  onclick="inc('q2')"
+                >
+                  +
+                </button>
+              </div>
+              <button type="button" class="btn btn-success">В корзину</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card text-center m-2" style="width: 18rem">
+            <img
+              src="src/pizza/3juliet.jpg"
+              class="card-img-top"
+              alt="Пицца Жульетта"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Пицца Жульетта</h5>
+              <div class="btn-group" role="group" aria-label="Размер пиццы">
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio7"
+                  autocomplete="off"
+                  checked
+                />
+                <label class="btn btn-outline-primary" for="btnradio7"
+                  >26см</label
+                >
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio8"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="btnradio8"
+                  >30см</label
+                >
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio9"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="btnradio9"
+                  >40см</label
+                >
+              </div>
+              <div class="quantity">
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  for="q3"
+                  onclick="decr('q3')"
+                >
+                  -
+                </button>
+                <input
+                  type="number"
+                  name="quantity"
+                  size="5"
+                  id="q3"
+                  value="1"
+                  min="1"
+                  max="25"
+                />
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  for="q3"
+                  onclick="inc('q3')"
+                >
+                  +
+                </button>
+              </div>
+              <button type="button" class="btn btn-success">В корзину</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card text-center m-2" style="width: 18rem">
+            <img
+              src="src/pizza/4cheese.jpg"
+              class="card-img-top"
+              alt="Пицца 4 сыра"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Пицца 4 сыра</h5>
+              <div class="btn-group" role="group" aria-label="Размер пиццы">
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio10"
+                  autocomplete="off"
+                  checked
+                />
+                <label class="btn btn-outline-primary" for="btnradio10"
+                  >26см</label
+                >
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio11"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="btnradio11"
+                  >30см</label
+                >
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio12"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="btnradio12"
+                  >40см</label
+                >
+              </div>
+              <div class="quantity">
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  for="q4"
+                  onclick="decr('q4')"
+                >
+                  -
+                </button>
+                <input
+                  type="number"
+                  name="quantity"
+                  size="5"
+                  id="q4"
+                  value="1"
+                  min="1"
+                  max="25"
+                />
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  for="q4"
+                  onclick="inc('q4')"
+                >
+                  +
+                </button>
+              </div>
+              <button type="button" class="btn btn-success">В корзину</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="card text-center m-2" style="width: 18rem">
+            <img
+              src="src/pizza/5meatassorti.jpg"
+              class="card-img-top"
+              alt="Пицца Мясное Ассорти"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Пицца Мясное Ассорти</h5>
+              <div class="btn-group" role="group" aria-label="Размер пиццы">
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio13"
+                  autocomplete="off"
+                  checked
+                />
+                <label class="btn btn-outline-primary" for="btnradio13"
+                  >26см</label
+                >
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio14"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="btnradio14"
+                  >30см</label
+                >
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio15"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="btnradio15"
+                  >40см</label
+                >
+              </div>
+              <div class="quantity">
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  for="q5"
+                  onclick="decr('q5')"
+                >
+                  -
+                </button>
+                <input
+                  type="number"
+                  name="quantity"
+                  size="5"
+                  id="q5"
+                  value="1"
+                  min="1"
+                  max="25"
+                />
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  for="q5"
+                  onclick="inc('q5')"
+                >
+                  +
+                </button>
+              </div>
+              <button type="button" class="btn btn-success">В корзину</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card text-center m-2" style="width: 18rem">
+            <img
+              src="src/pizza/6margarita.jpg"
+              class="card-img-top"
+              alt="Пицца Маргарита"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Пицца Маргарита</h5>
+              <div class="btn-group" role="group" aria-label="Размер пиццы">
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio16"
+                  autocomplete="off"
+                  checked
+                />
+                <label class="btn btn-outline-primary" for="btnradio16"
+                  >26см</label
+                >
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio17"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="btnradio17"
+                  >30см</label
+                >
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio18"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="btnradio18"
+                  >40см</label
+                >
+              </div>
+              <div class="quantity">
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  for="q6"
+                  onclick="decr('q6')"
+                >
+                  -
+                </button>
+                <input
+                  type="number"
+                  name="quantity"
+                  size="5"
+                  id="q6"
+                  value="1"
+                  min="1"
+                  max="25"
+                />
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  for="q6"
+                  onclick="inc('q6')"
+                >
+                  +
+                </button>
+              </div>
+              <button type="button" class="btn btn-success">В корзину</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card text-center m-2" style="width: 18rem">
+            <img
+              src="src/pizza/7cheeseburger.jpg"
+              class="card-img-top"
+              alt="Пицца Чизбургер"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Пицца Чизбургер</h5>
+              <div class="btn-group" role="group" aria-label="Размер пиццы">
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio19"
+                  autocomplete="off"
+                  checked
+                />
+                <label class="btn btn-outline-primary" for="btnradio19"
+                  >26см</label
+                >
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio20"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="btnradio20"
+                  >30см</label
+                >
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio21"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="btnradio21"
+                  >40см</label
+                >
+              </div>
+              <div class="quantity">
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  for="q7"
+                  onclick="decr('q7')"
+                >
+                  -
+                </button>
+                <input
+                  type="number"
+                  name="quantity"
+                  size="5"
+                  id="q7"
+                  value="1"
+                  min="1"
+                  max="25"
+                />
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  for="q7"
+                  onclick="inc('q7')"
+                >
+                  +
+                </button>
+              </div>
+              <button type="button" class="btn btn-success">В корзину</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card text-center m-2" style="width: 18rem">
+            <img
+              src="src/pizza/84tastes.jpg"
+              class="card-img-top"
+              alt="Пицца 4 вкуса"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Пицца 4 вкуса</h5>
+              <div class="btn-group" role="group" aria-label="Размер пиццы">
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio22"
+                  autocomplete="off"
+                  checked
+                />
+                <label class="btn btn-outline-primary" for="btnradio22"
+                  >26см</label
+                >
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio23"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="btnradio23"
+                  >30см</label
+                >
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio24"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="btnradio24"
+                  >40см</label
+                >
+              </div>
+              <div class="quantity">
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  for="q8"
+                  onclick="decr('q8')"
+                >
+                  -
+                </button>
+                <input
+                  type="number"
+                  name="quantity"
+                  size="5"
+                  id="q8"
+                  value="1"
+                  min="1"
+                  max="25"
+                />
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  for="q8"
+                  onclick="inc('q8')"
+                >
+                  +
+                </button>
+              </div>
+              <button type="button" class="btn btn-success">В корзину</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

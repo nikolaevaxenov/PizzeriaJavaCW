@@ -8,6 +8,9 @@
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+
+    <link rel="stylesheet" href="styles/index.css">
+
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -57,11 +60,11 @@
                   type="radio"
                   class="btn-check"
                   name="btnradio"
-                  id="btnradio1"
+                  id="1t26"
                   autocomplete="off"
-                  checked
+                  onclick="getCurrent(1, 26)"
                 />
-                <label class="btn btn-outline-primary" for="btnradio1"
+                <label class="btn btn-outline-primary" for="1t26"
                   >26см</label
                 >
 
@@ -69,10 +72,11 @@
                   type="radio"
                   class="btn-check"
                   name="btnradio"
-                  id="btnradio2"
+                  id="1t30"
                   autocomplete="off"
+                  onclick="getCurrent(1, 30)"
                 />
-                <label class="btn btn-outline-primary" for="btnradio2"
+                <label class="btn btn-outline-primary" for="1t30"
                   >30см</label
                 >
 
@@ -80,12 +84,17 @@
                   type="radio"
                   class="btn-check"
                   name="btnradio"
-                  id="btnradio3"
+                  id="1t40"
                   autocomplete="off"
+                  onclick="getCurrent(1, 40)"
                 />
-                <label class="btn btn-outline-primary" for="btnradio3"
+                <label class="btn btn-outline-primary" for="1t40"
                   >40см</label
                 >
+              </div>
+              <div class="cost">
+                <p class="lead" id="p1" style="display: inline;">399</p>
+                <p class="lead" style="display: inline;"></p>₽</p>
               </div>
               <div class="quantity">
                 <button
@@ -104,6 +113,8 @@
                   value="1"
                   min="1"
                   max="25"
+                  disabled
+                  disabled
                 />
                 <button
                   type="button"
@@ -132,11 +143,11 @@
                   type="radio"
                   class="btn-check"
                   name="btnradio"
-                  id="btnradio4"
+                  id="2t26"
                   autocomplete="off"
-                  checked
+                  onclick="getCurrent(2, 26)"
                 />
-                <label class="btn btn-outline-primary" for="btnradio4"
+                <label class="btn btn-outline-primary" for="2t26"
                   >26см</label
                 >
 
@@ -144,10 +155,11 @@
                   type="radio"
                   class="btn-check"
                   name="btnradio"
-                  id="btnradio5"
+                  id="2t30"
                   autocomplete="off"
+                  onclick="getCurrent(2, 30)"
                 />
-                <label class="btn btn-outline-primary" for="btnradio5"
+                <label class="btn btn-outline-primary" for="2t30"
                   >30см</label
                 >
 
@@ -155,12 +167,17 @@
                   type="radio"
                   class="btn-check"
                   name="btnradio"
-                  id="btnradio6"
+                  id="2t40"
                   autocomplete="off"
+                  onclick="getCurrent(2, 40)"
                 />
-                <label class="btn btn-outline-primary" for="btnradio6"
+                <label class="btn btn-outline-primary" for="2t40"
                   >40см</label
                 >
+              </div>
+              <div class="cost">
+                <p class="lead" id="p2" style="display: inline;">499</p>
+                <p class="lead" style="display: inline;"></p>₽</p>
               </div>
               <div class="quantity">
                 <button
@@ -179,6 +196,7 @@
                   value="1"
                   min="1"
                   max="25"
+                  disabled
                 />
                 <button
                   type="button"
@@ -207,11 +225,11 @@
                   type="radio"
                   class="btn-check"
                   name="btnradio"
-                  id="btnradio7"
+                  id="3t26"
                   autocomplete="off"
-                  checked
+                  onclick="getCurrent(3, 26)"
                 />
-                <label class="btn btn-outline-primary" for="btnradio7"
+                <label class="btn btn-outline-primary" for="3t26"
                   >26см</label
                 >
 
@@ -219,10 +237,11 @@
                   type="radio"
                   class="btn-check"
                   name="btnradio"
-                  id="btnradio8"
+                  id="3t30"
                   autocomplete="off"
+                  onclick="getCurrent(3, 30)"
                 />
-                <label class="btn btn-outline-primary" for="btnradio8"
+                <label class="btn btn-outline-primary" for="3t30"
                   >30см</label
                 >
 
@@ -230,12 +249,17 @@
                   type="radio"
                   class="btn-check"
                   name="btnradio"
-                  id="btnradio9"
+                  id="3t40"
                   autocomplete="off"
+                  onclick="getCurrent(3, 40)"
                 />
-                <label class="btn btn-outline-primary" for="btnradio9"
+                <label class="btn btn-outline-primary" for="3t40"
                   >40см</label
                 >
+              </div>
+              <div class="cost">
+                <p class="lead" id="p3" style="display: inline;">519</p>
+                <p class="lead" style="display: inline;"></p>₽</p>
               </div>
               <div class="quantity">
                 <button
@@ -254,6 +278,7 @@
                   value="1"
                   min="1"
                   max="25"
+                  disabled
                 />
                 <button
                   type="button"
@@ -282,11 +307,11 @@
                   type="radio"
                   class="btn-check"
                   name="btnradio"
-                  id="btnradio10"
+                  id="4t26"
                   autocomplete="off"
-                  checked
+                  onclick="getCurrent(4, 26)"
                 />
-                <label class="btn btn-outline-primary" for="btnradio10"
+                <label class="btn btn-outline-primary" for="4t26"
                   >26см</label
                 >
 
@@ -294,10 +319,11 @@
                   type="radio"
                   class="btn-check"
                   name="btnradio"
-                  id="btnradio11"
+                  id="4t30"
                   autocomplete="off"
+                  onclick="getCurrent(4, 30)"
                 />
-                <label class="btn btn-outline-primary" for="btnradio11"
+                <label class="btn btn-outline-primary" for="4t30"
                   >30см</label
                 >
 
@@ -305,12 +331,17 @@
                   type="radio"
                   class="btn-check"
                   name="btnradio"
-                  id="btnradio12"
+                  id="4t40"
                   autocomplete="off"
+                  onclick="getCurrent(4, 40)"
                 />
-                <label class="btn btn-outline-primary" for="btnradio12"
+                <label class="btn btn-outline-primary" for="4t40"
                   >40см</label
                 >
+              </div>
+              <div class="cost">
+                <p class="lead" id="p4" style="display: inline;">489</p>
+                <p class="lead" style="display: inline;"></p>₽</p>
               </div>
               <div class="quantity">
                 <button
@@ -329,6 +360,7 @@
                   value="1"
                   min="1"
                   max="25"
+                  disabled
                 />
                 <button
                   type="button"
@@ -359,11 +391,11 @@
                   type="radio"
                   class="btn-check"
                   name="btnradio"
-                  id="btnradio13"
+                  id="5t26"
                   autocomplete="off"
-                  checked
+                  onclick="getCurrent(5, 26)"
                 />
-                <label class="btn btn-outline-primary" for="btnradio13"
+                <label class="btn btn-outline-primary" for="5t26"
                   >26см</label
                 >
 
@@ -371,10 +403,11 @@
                   type="radio"
                   class="btn-check"
                   name="btnradio"
-                  id="btnradio14"
+                  id="5t30"
                   autocomplete="off"
+                  onclick="getCurrent(5, 30)"
                 />
-                <label class="btn btn-outline-primary" for="btnradio14"
+                <label class="btn btn-outline-primary" for="5t30"
                   >30см</label
                 >
 
@@ -382,12 +415,17 @@
                   type="radio"
                   class="btn-check"
                   name="btnradio"
-                  id="btnradio15"
+                  id="5t40"
                   autocomplete="off"
+                  onclick="getCurrent(5, 40)"
                 />
-                <label class="btn btn-outline-primary" for="btnradio15"
+                <label class="btn btn-outline-primary" for="5t40"
                   >40см</label
                 >
+              </div>
+              <div class="cost">
+                <p class="lead" id="p5" style="display: inline;">529</p>
+                <p class="lead" style="display: inline;"></p>₽</p>
               </div>
               <div class="quantity">
                 <button
@@ -406,6 +444,7 @@
                   value="1"
                   min="1"
                   max="25"
+                  disabled
                 />
                 <button
                   type="button"
@@ -434,11 +473,11 @@
                   type="radio"
                   class="btn-check"
                   name="btnradio"
-                  id="btnradio16"
+                  id="6t26"
                   autocomplete="off"
-                  checked
+                  onclick="getCurrent(6, 26)"
                 />
-                <label class="btn btn-outline-primary" for="btnradio16"
+                <label class="btn btn-outline-primary" for="6t26"
                   >26см</label
                 >
 
@@ -446,10 +485,11 @@
                   type="radio"
                   class="btn-check"
                   name="btnradio"
-                  id="btnradio17"
+                  id="6t30"
                   autocomplete="off"
+                  onclick="getCurrent(6, 30)"
                 />
-                <label class="btn btn-outline-primary" for="btnradio17"
+                <label class="btn btn-outline-primary" for="6t30"
                   >30см</label
                 >
 
@@ -457,12 +497,17 @@
                   type="radio"
                   class="btn-check"
                   name="btnradio"
-                  id="btnradio18"
+                  id="6t40"
                   autocomplete="off"
+                  onclick="getCurrent(6, 40)"
                 />
-                <label class="btn btn-outline-primary" for="btnradio18"
+                <label class="btn btn-outline-primary" for="6t40"
                   >40см</label
                 >
+              </div>
+              <div class="cost">
+                <p class="lead" id="p6" style="display: inline;">349</p>
+                <p class="lead" style="display: inline;"></p>₽</p>
               </div>
               <div class="quantity">
                 <button
@@ -481,6 +526,7 @@
                   value="1"
                   min="1"
                   max="25"
+                  disabled
                 />
                 <button
                   type="button"
@@ -509,11 +555,11 @@
                   type="radio"
                   class="btn-check"
                   name="btnradio"
-                  id="btnradio19"
+                  id="7t26"
                   autocomplete="off"
-                  checked
+                  onclick="getCurrent(7, 26)"
                 />
-                <label class="btn btn-outline-primary" for="btnradio19"
+                <label class="btn btn-outline-primary" for="7t26"
                   >26см</label
                 >
 
@@ -521,10 +567,11 @@
                   type="radio"
                   class="btn-check"
                   name="btnradio"
-                  id="btnradio20"
+                  id="7t30"
                   autocomplete="off"
+                  onclick="getCurrent(7, 30)"
                 />
-                <label class="btn btn-outline-primary" for="btnradio20"
+                <label class="btn btn-outline-primary" for="7t30"
                   >30см</label
                 >
 
@@ -532,12 +579,17 @@
                   type="radio"
                   class="btn-check"
                   name="btnradio"
-                  id="btnradio21"
+                  id="7t40"
                   autocomplete="off"
+                  onclick="getCurrent(7, 40)"
                 />
-                <label class="btn btn-outline-primary" for="btnradio21"
+                <label class="btn btn-outline-primary" for="7t40"
                   >40см</label
                 >
+              </div>
+              <div class="cost">
+                <p class="lead" id="p7" style="display: inline;">479</p>
+                <p class="lead" style="display: inline;"></p>₽</p>
               </div>
               <div class="quantity">
                 <button
@@ -556,6 +608,7 @@
                   value="1"
                   min="1"
                   max="25"
+                  disabled
                 />
                 <button
                   type="button"
@@ -584,11 +637,11 @@
                   type="radio"
                   class="btn-check"
                   name="btnradio"
-                  id="btnradio22"
+                  id="8t26"
                   autocomplete="off"
-                  checked
+                  onclick="getCurrent(8, 26)"
                 />
-                <label class="btn btn-outline-primary" for="btnradio22"
+                <label class="btn btn-outline-primary" for="8t26"
                   >26см</label
                 >
 
@@ -596,10 +649,11 @@
                   type="radio"
                   class="btn-check"
                   name="btnradio"
-                  id="btnradio23"
+                  id="8t30"
                   autocomplete="off"
+                  onclick="getCurrent(8, 30)"
                 />
-                <label class="btn btn-outline-primary" for="btnradio23"
+                <label class="btn btn-outline-primary" for="8t30"
                   >30см</label
                 >
 
@@ -607,12 +661,17 @@
                   type="radio"
                   class="btn-check"
                   name="btnradio"
-                  id="btnradio24"
+                  id="8t40"
                   autocomplete="off"
+                  onclick="getCurrent(8, 40)"
                 />
-                <label class="btn btn-outline-primary" for="btnradio24"
+                <label class="btn btn-outline-primary" for="8t40"
                   >40см</label
                 >
+              </div>
+              <div class="cost">
+                <p class="lead" id="p8" style="display: inline;">449</p>
+                <p class="lead" style="display: inline;"></p>₽</p>
               </div>
               <div class="quantity">
                 <button
@@ -631,6 +690,7 @@
                   value="1"
                   min="1"
                   max="25"
+                  disabled
                 />
                 <button
                   type="button"

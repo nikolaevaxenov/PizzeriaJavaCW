@@ -4,6 +4,7 @@ class Pizza {
   quantity = 0;
   cost = 0;
   orig_cost = 0;
+  choosed = false;
 
   constructor(type, size, quantity) {
     switch (size) {
@@ -164,6 +165,18 @@ class Pizza {
     }
     this.cost = this.orig_cost * this.quantity;
   }
+
+  setChoosed() {
+    this.choosed = true;
+  }
+
+  unsetChoosed() {
+    this.choosed = false;
+  }
+
+  getChoosedState() {
+    return this.choosed;
+  }
 }
 
 class Order {
@@ -202,6 +215,7 @@ class Order {
         this.pizzaArr[i].getType() == type &&
         this.pizzaArr[i].getSize() == size
       ) {
+        this.pizzaArr[i].setChoosed();
         return this.pizzaArr[i].incrementPizza();
       }
     }
@@ -243,7 +257,9 @@ class Order {
     var sum = 0;
 
     for (var i = 0; i < this.pizzaArr.length; i++) {
-      sum += this.pizzaArr[i].getCost();
+      if (this.pizzaArr[i].getChoosedState() == true) {
+        sum += this.pizzaArr[i].getCost();
+      }
     }
 
     return sum;
@@ -301,4 +317,35 @@ function getCurrent(type, size) {
   document.getElementById("p" + type).innerHTML = order
     .findPizza(type, size)
     .getCost();
+}
+
+function addToCart(type) {
+  if (document.getElementById("cart").innerHTML == "") {
+    document.getElementById("cart").innerHTML =
+      '<div id="cart" class="cart"><h1 align="center">Корзина</h1><table class="table table-hover"><thead><tr><th scope="col">Название</th><th scope="col">Размер</th><th scope="col">Количество</th><th scope="col">Цена</th></tr></thead><tbody id="orderTable"></tbody></table><div class="confirmationBlock"><h2 style="display: inline" id="summary">Итог: 0 ₽</h2><button type="button" class="btn btn-success" style="display: inline; float: right">Продолжить оформление</button></div></div>';
+  }
+
+  var size = 0;
+
+  if (document.getElementById(type + "t" + "26").checked == true) {
+    size = 26;
+  } else if (document.getElementById(type + "t" + "30").checked == true) {
+    size = 30;
+  } else if (document.getElementById(type + "t" + "40").checked == true) {
+    size = 40;
+  } else {
+    return;
+  }
+
+  order.findPizza(type, size).setChoosed();
+
+  document.getElementById("orderTable").innerHTML += `<tr><td>${
+    document.getElementById(`name${type}`).textContent
+  }</td><td>${size} см</td><td>${order
+    .findPizza(type, size)
+    .getQuantity()}</td><td>${order.findPizza(type, size).getCost()}</td></tr>`;
+
+  document.getElementById(
+    "summary"
+  ).innerHTML = `Итог: ${order.getTotalCost()} ₽`;
 }

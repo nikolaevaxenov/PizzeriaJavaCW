@@ -11,3 +11,15 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+.cart {
+  margin: 2% 1%;
+}
+
+.table {
+  margin-right: 5%;
+}
+
+.confirmationBlock {
+  margin-top: 2%;
+}

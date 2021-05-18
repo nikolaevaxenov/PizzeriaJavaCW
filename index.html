@@ -9,7 +9,7 @@
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
 
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/index.css" />
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -54,7 +54,7 @@
               alt="Пицца Пепперони"
             />
             <div class="card-body">
-              <h5 class="card-title">Пицца Пепперони</h5>
+              <h5 class="card-title" id="name1">Пицца Пепперони</h5>
               <div class="btn-group" role="group" aria-label="Размер пиццы">
                 <input
                   type="radio"
@@ -64,9 +64,7 @@
                   autocomplete="off"
                   onclick="getCurrent(1, 26)"
                 />
-                <label class="btn btn-outline-primary" for="1t26"
-                  >26см</label
-                >
+                <label class="btn btn-outline-primary" for="1t26">26см</label>
 
                 <input
                   type="radio"
@@ -76,9 +74,7 @@
                   autocomplete="off"
                   onclick="getCurrent(1, 30)"
                 />
-                <label class="btn btn-outline-primary" for="1t30"
-                  >30см</label
-                >
+                <label class="btn btn-outline-primary" for="1t30">30см</label>
 
                 <input
                   type="radio"
@@ -88,13 +84,11 @@
                   autocomplete="off"
                   onclick="getCurrent(1, 40)"
                 />
-                <label class="btn btn-outline-primary" for="1t40"
-                  >40см</label
-                >
+                <label class="btn btn-outline-primary" for="1t40">40см</label>
               </div>
               <div class="cost">
-                <p class="lead" id="p1" style="display: inline;">399</p>
-                <p class="lead" style="display: inline;"></p>₽</p>
+                <p class="lead" id="p1" style="display: inline">399</p>
+                <p class="lead" style="display: inline">₽</p>
               </div>
               <div class="quantity">
                 <button
@@ -125,7 +119,13 @@
                   +
                 </button>
               </div>
-              <button type="button" class="btn btn-success">В корзину</button>
+              <button
+                type="button"
+                class="btn btn-success"
+                onclick="addToCart(1)"
+              >
+                В корзину
+              </button>
             </div>
           </div>
         </div>
@@ -137,7 +137,7 @@
               alt="Пицца Барбекю"
             />
             <div class="card-body">
-              <h5 class="card-title">Пицца Барбекю</h5>
+              <h5 class="card-title" id="name2">Пицца Барбекю</h5>
               <div class="btn-group" role="group" aria-label="Размер пиццы">
                 <input
                   type="radio"
@@ -147,9 +147,7 @@
                   autocomplete="off"
                   onclick="getCurrent(2, 26)"
                 />
-                <label class="btn btn-outline-primary" for="2t26"
-                  >26см</label
-                >
+                <label class="btn btn-outline-primary" for="2t26">26см</label>
 
                 <input
                   type="radio"
@@ -159,9 +157,7 @@
                   autocomplete="off"
                   onclick="getCurrent(2, 30)"
                 />
-                <label class="btn btn-outline-primary" for="2t30"
-                  >30см</label
-                >
+                <label class="btn btn-outline-primary" for="2t30">30см</label>
 
                 <input
                   type="radio"
@@ -171,13 +167,11 @@
                   autocomplete="off"
                   onclick="getCurrent(2, 40)"
                 />
-                <label class="btn btn-outline-primary" for="2t40"
-                  >40см</label
-                >
+                <label class="btn btn-outline-primary" for="2t40">40см</label>
               </div>
               <div class="cost">
-                <p class="lead" id="p2" style="display: inline;">499</p>
-                <p class="lead" style="display: inline;"></p>₽</p>
+                <p class="lead" id="p2" style="display: inline">499</p>
+                <p class="lead" style="display: inline">₽</p>
               </div>
               <div class="quantity">
                 <button
@@ -207,7 +201,13 @@
                   +
                 </button>
               </div>
-              <button type="button" class="btn btn-success">В корзину</button>
+              <button
+                type="button"
+                class="btn btn-success"
+                onclick="addToCart(2)"
+              >
+                В корзину
+              </button>
             </div>
           </div>
         </div>
@@ -219,7 +219,7 @@
               alt="Пицца Жульетта"
             />
             <div class="card-body">
-              <h5 class="card-title">Пицца Жульетта</h5>
+              <h5 class="card-title" id="name3">Пицца Жульетта</h5>
               <div class="btn-group" role="group" aria-label="Размер пиццы">
                 <input
                   type="radio"
@@ -229,9 +229,7 @@
                   autocomplete="off"
                   onclick="getCurrent(3, 26)"
                 />
-                <label class="btn btn-outline-primary" for="3t26"
-                  >26см</label
-                >
+                <label class="btn btn-outline-primary" for="3t26">26см</label>
 
                 <input
                   type="radio"
@@ -241,9 +239,7 @@
                   autocomplete="off"
                   onclick="getCurrent(3, 30)"
                 />
-                <label class="btn btn-outline-primary" for="3t30"
-                  >30см</label
-                >
+                <label class="btn btn-outline-primary" for="3t30">30см</label>
 
                 <input
                   type="radio"
@@ -253,13 +249,11 @@
                   autocomplete="off"
                   onclick="getCurrent(3, 40)"
                 />
-                <label class="btn btn-outline-primary" for="3t40"
-                  >40см</label
-                >
+                <label class="btn btn-outline-primary" for="3t40">40см</label>
               </div>
               <div class="cost">
-                <p class="lead" id="p3" style="display: inline;">519</p>
-                <p class="lead" style="display: inline;"></p>₽</p>
+                <p class="lead" id="p3" style="display: inline">519</p>
+                <p class="lead" style="display: inline">₽</p>
               </div>
               <div class="quantity">
                 <button
@@ -289,7 +283,13 @@
                   +
                 </button>
               </div>
-              <button type="button" class="btn btn-success">В корзину</button>
+              <button
+                type="button"
+                class="btn btn-success"
+                onclick="addToCart(3)"
+              >
+                В корзину
+              </button>
             </div>
           </div>
         </div>
@@ -301,7 +301,7 @@
               alt="Пицца 4 сыра"
             />
             <div class="card-body">
-              <h5 class="card-title">Пицца 4 сыра</h5>
+              <h5 class="card-title" id="name4">Пицца 4 сыра</h5>
               <div class="btn-group" role="group" aria-label="Размер пиццы">
                 <input
                   type="radio"
@@ -311,9 +311,7 @@
                   autocomplete="off"
                   onclick="getCurrent(4, 26)"
                 />
-                <label class="btn btn-outline-primary" for="4t26"
-                  >26см</label
-                >
+                <label class="btn btn-outline-primary" for="4t26">26см</label>
 
                 <input
                   type="radio"
@@ -323,9 +321,7 @@
                   autocomplete="off"
                   onclick="getCurrent(4, 30)"
                 />
-                <label class="btn btn-outline-primary" for="4t30"
-                  >30см</label
-                >
+                <label class="btn btn-outline-primary" for="4t30">30см</label>
 
                 <input
                   type="radio"
@@ -335,13 +331,11 @@
                   autocomplete="off"
                   onclick="getCurrent(4, 40)"
                 />
-                <label class="btn btn-outline-primary" for="4t40"
-                  >40см</label
-                >
+                <label class="btn btn-outline-primary" for="4t40">40см</label>
               </div>
               <div class="cost">
-                <p class="lead" id="p4" style="display: inline;">489</p>
-                <p class="lead" style="display: inline;"></p>₽</p>
+                <p class="lead" id="p4" style="display: inline">489</p>
+                <p class="lead" style="display: inline">₽</p>
               </div>
               <div class="quantity">
                 <button
@@ -371,7 +365,13 @@
                   +
                 </button>
               </div>
-              <button type="button" class="btn btn-success">В корзину</button>
+              <button
+                type="button"
+                class="btn btn-success"
+                onclick="addToCart(4)"
+              >
+                В корзину
+              </button>
             </div>
           </div>
         </div>
@@ -385,7 +385,7 @@
               alt="Пицца Мясное Ассорти"
             />
             <div class="card-body">
-              <h5 class="card-title">Пицца Мясное Ассорти</h5>
+              <h5 class="card-title" id="name5">Пицца Мясное Ассорти</h5>
               <div class="btn-group" role="group" aria-label="Размер пиццы">
                 <input
                   type="radio"
@@ -395,9 +395,7 @@
                   autocomplete="off"
                   onclick="getCurrent(5, 26)"
                 />
-                <label class="btn btn-outline-primary" for="5t26"
-                  >26см</label
-                >
+                <label class="btn btn-outline-primary" for="5t26">26см</label>
 
                 <input
                   type="radio"
@@ -407,9 +405,7 @@
                   autocomplete="off"
                   onclick="getCurrent(5, 30)"
                 />
-                <label class="btn btn-outline-primary" for="5t30"
-                  >30см</label
-                >
+                <label class="btn btn-outline-primary" for="5t30">30см</label>
 
                 <input
                   type="radio"
@@ -419,13 +415,11 @@
                   autocomplete="off"
                   onclick="getCurrent(5, 40)"
                 />
-                <label class="btn btn-outline-primary" for="5t40"
-                  >40см</label
-                >
+                <label class="btn btn-outline-primary" for="5t40">40см</label>
               </div>
               <div class="cost">
-                <p class="lead" id="p5" style="display: inline;">529</p>
-                <p class="lead" style="display: inline;"></p>₽</p>
+                <p class="lead" id="p5" style="display: inline">529</p>
+                <p class="lead" style="display: inline">₽</p>
               </div>
               <div class="quantity">
                 <button
@@ -455,7 +449,13 @@
                   +
                 </button>
               </div>
-              <button type="button" class="btn btn-success">В корзину</button>
+              <button
+                type="button"
+                class="btn btn-success"
+                onclick="addToCart(5)"
+              >
+                В корзину
+              </button>
             </div>
           </div>
         </div>
@@ -467,7 +467,7 @@
               alt="Пицца Маргарита"
             />
             <div class="card-body">
-              <h5 class="card-title">Пицца Маргарита</h5>
+              <h5 class="card-title" id="name6">Пицца Маргарита</h5>
               <div class="btn-group" role="group" aria-label="Размер пиццы">
                 <input
                   type="radio"
@@ -477,9 +477,7 @@
                   autocomplete="off"
                   onclick="getCurrent(6, 26)"
                 />
-                <label class="btn btn-outline-primary" for="6t26"
-                  >26см</label
-                >
+                <label class="btn btn-outline-primary" for="6t26">26см</label>
 
                 <input
                   type="radio"
@@ -489,9 +487,7 @@
                   autocomplete="off"
                   onclick="getCurrent(6, 30)"
                 />
-                <label class="btn btn-outline-primary" for="6t30"
-                  >30см</label
-                >
+                <label class="btn btn-outline-primary" for="6t30">30см</label>
 
                 <input
                   type="radio"
@@ -501,13 +497,11 @@
                   autocomplete="off"
                   onclick="getCurrent(6, 40)"
                 />
-                <label class="btn btn-outline-primary" for="6t40"
-                  >40см</label
-                >
+                <label class="btn btn-outline-primary" for="6t40">40см</label>
               </div>
               <div class="cost">
-                <p class="lead" id="p6" style="display: inline;">349</p>
-                <p class="lead" style="display: inline;"></p>₽</p>
+                <p class="lead" id="p6" style="display: inline">349</p>
+                <p class="lead" style="display: inline">₽</p>
               </div>
               <div class="quantity">
                 <button
@@ -537,7 +531,13 @@
                   +
                 </button>
               </div>
-              <button type="button" class="btn btn-success">В корзину</button>
+              <button
+                type="button"
+                class="btn btn-success"
+                onclick="addToCart(6)"
+              >
+                В корзину
+              </button>
             </div>
           </div>
         </div>
@@ -549,7 +549,7 @@
               alt="Пицца Чизбургер"
             />
             <div class="card-body">
-              <h5 class="card-title">Пицца Чизбургер</h5>
+              <h5 class="card-title" id="name7">Пицца Чизбургер</h5>
               <div class="btn-group" role="group" aria-label="Размер пиццы">
                 <input
                   type="radio"
@@ -559,9 +559,7 @@
                   autocomplete="off"
                   onclick="getCurrent(7, 26)"
                 />
-                <label class="btn btn-outline-primary" for="7t26"
-                  >26см</label
-                >
+                <label class="btn btn-outline-primary" for="7t26">26см</label>
 
                 <input
                   type="radio"
@@ -571,9 +569,7 @@
                   autocomplete="off"
                   onclick="getCurrent(7, 30)"
                 />
-                <label class="btn btn-outline-primary" for="7t30"
-                  >30см</label
-                >
+                <label class="btn btn-outline-primary" for="7t30">30см</label>
 
                 <input
                   type="radio"
@@ -583,13 +579,11 @@
                   autocomplete="off"
                   onclick="getCurrent(7, 40)"
                 />
-                <label class="btn btn-outline-primary" for="7t40"
-                  >40см</label
-                >
+                <label class="btn btn-outline-primary" for="7t40">40см</label>
               </div>
               <div class="cost">
-                <p class="lead" id="p7" style="display: inline;">479</p>
-                <p class="lead" style="display: inline;"></p>₽</p>
+                <p class="lead" id="p7" style="display: inline">479</p>
+                <p class="lead" style="display: inline">₽</p>
               </div>
               <div class="quantity">
                 <button
@@ -619,7 +613,13 @@
                   +
                 </button>
               </div>
-              <button type="button" class="btn btn-success">В корзину</button>
+              <button
+                type="button"
+                class="btn btn-success"
+                onclick="addToCart(7)"
+              >
+                В корзину
+              </button>
             </div>
           </div>
         </div>
@@ -631,7 +631,7 @@
               alt="Пицца 4 вкуса"
             />
             <div class="card-body">
-              <h5 class="card-title">Пицца 4 вкуса</h5>
+              <h5 class="card-title" id="name8">Пицца 4 вкуса</h5>
               <div class="btn-group" role="group" aria-label="Размер пиццы">
                 <input
                   type="radio"
@@ -641,9 +641,7 @@
                   autocomplete="off"
                   onclick="getCurrent(8, 26)"
                 />
-                <label class="btn btn-outline-primary" for="8t26"
-                  >26см</label
-                >
+                <label class="btn btn-outline-primary" for="8t26">26см</label>
 
                 <input
                   type="radio"
@@ -653,9 +651,7 @@
                   autocomplete="off"
                   onclick="getCurrent(8, 30)"
                 />
-                <label class="btn btn-outline-primary" for="8t30"
-                  >30см</label
-                >
+                <label class="btn btn-outline-primary" for="8t30">30см</label>
 
                 <input
                   type="radio"
@@ -665,13 +661,11 @@
                   autocomplete="off"
                   onclick="getCurrent(8, 40)"
                 />
-                <label class="btn btn-outline-primary" for="8t40"
-                  >40см</label
-                >
+                <label class="btn btn-outline-primary" for="8t40">40см</label>
               </div>
               <div class="cost">
-                <p class="lead" id="p8" style="display: inline;">449</p>
-                <p class="lead" style="display: inline;"></p>₽</p>
+                <p class="lead" id="p8" style="display: inline">449</p>
+                <p class="lead" style="display: inline">₽</p>
               </div>
               <div class="quantity">
                 <button
@@ -701,11 +695,19 @@
                   +
                 </button>
               </div>
-              <button type="button" class="btn btn-success">В корзину</button>
+              <button
+                type="button"
+                class="btn btn-success"
+                onclick="addToCart(8)"
+              >
+                В корзину
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <hr />
+    <div id="cart" class="cart"></div>
   </body>
 </html>

@@ -322,7 +322,7 @@ function getCurrent(type, size) {
 function addToCart(type) {
   if (document.getElementById("cart").innerHTML == "") {
     document.getElementById("cart").innerHTML =
-      '<div id="cart" class="cart"><h1 align="center">Корзина</h1><table class="table table-hover"><thead><tr><th scope="col">Название</th><th scope="col">Размер</th><th scope="col">Количество</th><th scope="col">Цена</th></tr></thead><tbody id="orderTable"></tbody></table><div class="confirmationBlock"><h2 style="display: inline" id="summary">Итог: 0 ₽</h2><button type="button" class="btn btn-success" style="display: inline; float: right">Продолжить оформление</button></div></div>';
+      '<h1 align="center">Корзина</h1><table class="table table-hover"><thead><tr><th scope="col">Название</th><th scope="col">Размер</th><th scope="col">Количество</th><th scope="col">Цена</th></tr></thead><tbody id="orderTable"></tbody></table><div class="confirmationBlock"><h2 style="display: inline" id="summary">Итог: 0 ₽</h2><button type="button" class="btn btn-success" style="display: inline; float: right" onclick="submitOrder()">Продолжить оформление</button></div>';
   }
 
   var size = 0;
@@ -348,4 +348,11 @@ function addToCart(type) {
   document.getElementById(
     "summary"
   ).innerHTML = `Итог: ${order.getTotalCost()} ₽`;
+}
+
+function submitOrder() {
+  if (document.getElementById("cart").innerHTML !== "") {
+    document.getElementById("cart").innerHTML =
+      '<form class="row g-3 needs-validation" novalidate> <div class="col-md-4"> <label for="form1" class="form-label">Имя</label> <input type="text" class="form-control" id="form1" value="Иван" required /> <div class="invalid-feedback">Пожалуйста, введите корректное имя</div> </div> <div class="col-md-4"> <label for="form2" class="form-label">Фамилия</label> <input type="text" class="form-control" id="form2" value="Иванов" required /> <div class="invalid-feedback"> Пожалуйста, введите корректную фамилию </div> </div> <div class="col-md-4"> <label for="form3" class="form-label">Email-адрес</label> <input type="text" class="form-control" id="form3" value="example@mail.ru" required /> <div class="invalid-feedback"> Пожалуйста, введите корректный email-адрес </div> </div> <div class="col-md-4"> <label for="form4" class="form-label">Номер телефона</label> <input type="text" class="form-control" id="form4" value="+79997770011" required /> <div class="invalid-feedback"> Пожалуйста, введите корректный номер телефона </div> </div> <div class="col-md-4"> <label for="form5" class="form-label">Улица</label> <input type="text" class="form-control" id="form5" value="Селигерская" required /> <div class="invalid-feedback"> Пожалуйста, введите корректное название улицы </div> </div> <div class="col-md-4"> <label for="form6" class="form-label">Дом</label> <input type="text" class="form-control" id="form6" value="1" required /> <div class="invalid-feedback"> Пожалуйста, введите корректный номер дома </div> </div> <div class="col-md-4"> <label for="form7" class="form-label">Подъезд</label> <input type="text" class="form-control" id="form7" value="1" required /> <div class="invalid-feedback"> Пожалуйста, введите корректный номер подъезда </div> </div> <div class="col-md-4"> <label for="form8" class="form-label">Этаж</label> <input type="text" class="form-control" id="form8" value="10" required /> <div class="invalid-feedback"> Пожалуйста, введите корректный этаж </div> </div> <div class="col-md-4"> <label for="form9" class="form-label">Код домофона</label> <input type="text" class="form-control" id="form9" required /> <div class="invalid-feedback"> Пожалуйста, введите корректный код домофона </div> </div> <div class="col-mb-3"> <label for="form10" class="form-label">Комментарий к заказу</label> <input type="text" class="form-control" id="form10" /> </div> <div class="col-12"> <button class="btn btn-primary" type="submit" id="ordernow"> Заказать </button> </div> </form>';
+  }
 }

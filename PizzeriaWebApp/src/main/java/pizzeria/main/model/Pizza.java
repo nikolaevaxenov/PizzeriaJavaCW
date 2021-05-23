@@ -8,17 +8,40 @@ public class Pizza {
     private int originalCost;
     private boolean choosed;
 
-    public Pizza(int type, int size, int quantity, int cost, int originalCost, boolean choosed) {
+    public Pizza(int type, int size, int quantity, int originalCost, boolean choosed) {
         this.type = type;
         this.size = size;
         this.quantity = quantity;
-        this.cost = cost;
         this.originalCost = originalCost;
+        this.cost = quantity * originalCost;
         this.choosed = choosed;
     }
 
     public int getType() {
         return type;
+    }
+
+    public String getTypeName() {
+        switch (type) {
+            case 1:
+                return "Пицца Пепперони";
+            case 2:
+                return "Пицца Барбекю";
+            case 3:
+                return "Пицца Жульетта";
+            case 4:
+                return "Пицца 4 сыра";
+            case 5:
+                return "Пицца Мясное Ассорти";
+            case 6:
+                return "Пицца Маргарита";
+            case 7:
+                return "Пицца Чизбургер";
+            case 8:
+                return "Пицца 4 вкуса";
+            default:
+                return "Null Pizza";
+        }
     }
 
     public void setType(int type) {
@@ -42,11 +65,8 @@ public class Pizza {
     }
 
     public int getCost() {
+        cost = quantity * originalCost;
         return cost;
-    }
-
-    public void setCost(int cost) {
-        this.cost = cost;
     }
 
     public int getOriginalCost() {

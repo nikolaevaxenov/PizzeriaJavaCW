@@ -22,9 +22,9 @@ public class CartList implements Serializable {
     @JoinColumn(name = "CART_UID")
     private Cart cart;
 
-    @MapsId("bookUid")
+    @MapsId("pizzaUid")
     @ManyToOne
-    @JoinColumn(name = "BOOK_UID")
+    @JoinColumn(name = "PIZZA_UID")
     private Pizza pizza;
 
     @Builder

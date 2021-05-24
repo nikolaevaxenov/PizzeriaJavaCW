@@ -3,8 +3,11 @@ package pizzeria.main.Classes;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import pizzeria.main.Dto.Pizza.PizzaUpdateCountDto;
+import pizzeria.main.Dto.Pizza.PizzaUpdateDto;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Entity
@@ -23,10 +26,10 @@ public class Pizza {
     private Long pizzaPrice;
 
     @OneToMany(mappedBy = "pizza", orphanRemoval = true)
-    private List<Orderlist> orderlists;
+    private List<OrderList> orderlists;
 
     @OneToMany(mappedBy = "pizza", cascade = {CascadeType.REMOVE})
-    private List<Cartlist> cartlists;
+    private List<CartList> cartlists;
 
 
     public void updateCount(PizzaUpdateCountDto pizzaUpdateCountDto) {
@@ -34,7 +37,7 @@ public class Pizza {
     }
 
     @Builder
-    public Pizza(Long uid, String pizzaName, Long pizzaCount, Long pizzaPrice, List<Cartlist> cartlists, List<Orderlist> orderlists) {
+    public Pizza(Long uid, String pizzaName, Long pizzaCount, Long pizzaPrice, List<CartList> cartlists, List<OrderList> orderlists) {
         this.uid = uid;
         this.pizzaName = pizzaName;
         this.pizzaCount = pizzaCount;

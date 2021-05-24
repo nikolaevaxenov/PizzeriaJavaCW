@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @NoArgsConstructor
@@ -24,10 +25,10 @@ public class Cart {
     private String modifytime;
 
     @OneToMany(mappedBy = "cart", cascade = {CascadeType.REMOVE})
-    private List<Cartlist> cartlists;
+    private List<CartList> cartlists;
 
     @Builder
-    public Cart(Long uid, Users users, String createtime, String modifytime, List<Cartlist> cartlists){
+    public Cart(Long uid, Users users, String createtime, String modifytime, List<CartList> cartlists){
         this.uid = uid;
         this.users = users;
         this.createtime = createtime;

@@ -43,7 +43,7 @@ public class PizzaService<UsersInfo> {
 
     @Transactional(readOnly = true)
     public List<Pizza> findPizzaByLike(String name){
-        return pizzaRepository.findAllByPizzaNameIgnore(name);
+        return pizzaRepository.findAllByPizzaName(name);
     }
 
     @Transactional

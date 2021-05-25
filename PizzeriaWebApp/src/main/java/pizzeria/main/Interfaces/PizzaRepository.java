@@ -6,5 +6,5 @@ import pizzeria.main.Classes.Pizza;
 import java.util.List;
 
 public interface PizzaRepository extends JpaRepository<Pizza, Long> {
-    List<Pizza> findAllByPizzaNameIgnore(String name);
+    List<Pizza> findAllByPizzaName(String name);
 }

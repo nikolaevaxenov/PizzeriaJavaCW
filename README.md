@@ -10,15 +10,15 @@
 
 - Индивидуальное задание на разработку
 - Документация по Spring Framework и JEE
-- Документация по языку Java (версия не ниже 8)
+- Документация по языку Java
 
 **_Инструменты и технологии:_**
 
 - JDK (не ниже 8)
 - Создание Spring MVC web-приложений
-- RESTful web-сервисов или (на выбор)
-- Spring ORM или Spring DAO (на выбор)
-- Gradle или Maven (на выбор)
+- RESTful web-сервисов
+- Spring ORM
+- Gradle
 - GitHub
 - IntelliJIDEA
 

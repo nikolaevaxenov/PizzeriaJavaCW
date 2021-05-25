@@ -7,10 +7,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
 import pizzeria.main.Config.ApiResponse;
-import pizzeria.main.Dto.User.AddrInfoDto;
-import pizzeria.main.Dto.User.CardInfoDto;
-import pizzeria.main.Dto.User.UsersSignInDto;
-import pizzeria.main.Dto.User.UsersSignUpDto;
+import pizzeria.main.Dto.Users.AddrInfoDto;
+import pizzeria.main.Dto.Users.CardInfoDto;
+import pizzeria.main.Dto.Users.UsersSignInDto;
+import pizzeria.main.Dto.Users.UsersSignUpDto;
 import pizzeria.main.Services.UsersService;
 import pizzeria.main.Session.UsersInfo;
 

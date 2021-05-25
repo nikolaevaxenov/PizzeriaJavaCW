@@ -8,17 +8,17 @@ import pizzeria.main.Classes.Address;
 import pizzeria.main.Classes.Card;
 import pizzeria.main.Classes.Users;
 import pizzeria.main.Config.PasswordEncoding;
-import pizzeria.main.Dto.User.AddrInfoDto;
-import pizzeria.main.Dto.User.CardInfoDto;
-import pizzeria.main.Dto.User.UsersSignInDto;
-import pizzeria.main.Dto.User.UsersSignUpDto;
+import pizzeria.main.Dto.Users.AddrInfoDto;
+import pizzeria.main.Dto.Users.CardInfoDto;
+import pizzeria.main.Dto.Users.UsersSignInDto;
+import pizzeria.main.Dto.Users.UsersSignUpDto;
 import pizzeria.main.Interfaces.AddressRepository;
 import pizzeria.main.Interfaces.CardRepository;
 import pizzeria.main.Interfaces.UsersRepository;
 import pizzeria.main.Session.UsersInfo;
 
 import java.util.List;
-import java.util.Optional;
+
 //сервис класса пользователь
 @RequiredArgsConstructor
 @Service

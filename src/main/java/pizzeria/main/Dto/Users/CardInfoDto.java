@@ -1,4 +1,4 @@
-package pizzeria.main.Dto.User;
+package pizzeria.main.Dto.Users;
 
 import lombok.Builder;
 import lombok.Getter;

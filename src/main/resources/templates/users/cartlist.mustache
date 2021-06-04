@@ -9,8 +9,7 @@
 <script src="/js/app/cartlist.js"></script>
 <div class="container">
     <div class="d-flex justify-content-center">
-        <h3>
-            корзина покупателя</h3>
+        <h1 align="center">Корзина</h1>
     </div>
     <div>
         <div class="row">
@@ -39,7 +38,7 @@
                         <td class="col-md-5">
                             <div>
                                 <div>
-                                    Название Пиццы: {{pizza.pizzaName}}
+                                    {{pizza.pizzaName}}
                                 </div>
                             </div>
                         </td>
@@ -48,7 +47,7 @@
                                 <div class="mr-1">
                                     Количество: </div>
                                 <script>
-                                    document.write(`<input class="col-md-8 form-control" name="count" id="pizzaCount`+i+`"type="number" min="1" max="`+{{pizza.pizzaCount}}+`" value="`+{{pizzaCount}}+`"/>`);
+                                    document.write(`<input class="col-md-6 form-control" name="count" id="pizzaCount`+i+`"type="number" min="1" max="`+{{pizza.pizzaCount}}+`" value="`+{{pizzaCount}}+`"/>`);
                                 </script>
                             </div>
                         </td>
@@ -59,7 +58,7 @@
                                 <script>
                                     document.write(`<p class="mb-0 text-center" id="total`+i+`">`+
                                     multipleTotalPrice({{pizza.pizzaPrice}},i)+
-                                    `</p>`)
+                                    ` руб.</p>`)
                                 </script>
                             </div>
                         </td>
@@ -76,7 +75,7 @@
     </div>
     <div class="d-flex justify-content-end">
         <div class="btn-group">
-            <button type="button"class="btn btn-lg btn-outline-secondary" id="btn-cartlistOrder" >Купить</button>
+            <button type="button" class="btn btn-lg btn-outline-success" id="btn-cartlistOrder" >Перейти к оформлению заказа</button>
             <button type="button" class="btn btn-lg btn-outline-secondary">Отменить</button>
         </div>
     </div>

@@ -1,0 +1,25 @@
+.col {
+  align-items: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.cart {
+  margin: 2% 1%;
+}
+
+.table {
+  margin-right: 5%;
+}
+
+.confirmationBlock {
+  margin-top: 2%;
+}
